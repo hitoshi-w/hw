@@ -1,0 +1,5 @@
+<h2>タスク編集</h2>
+<%= form_with model: @task, url: task_path(@task), method: :patch, local: true do |f| %>
+  <%= f.text_field :content %>
+  <%= f.submit '更新' %>
+<% end %>
