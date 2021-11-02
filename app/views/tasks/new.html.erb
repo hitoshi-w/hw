@@ -1,0 +1,5 @@
+<h2>タスク登録</h2>
+<%= form_with model: @task, url: tasks_path, method: :post, local: true do |f| %>
+  <%= f.text_field :content %>
+  <%= f.submit '登録' %>
+<% end %>
