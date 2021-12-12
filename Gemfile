@@ -13,8 +13,6 @@ gem 'puma', '~> 5.0'
 gem 'sass-rails', '>= 6'
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
 gem 'webpacker', '~> 5.0'
-# Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
-gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.7'
 # Use Redis adapter to run Action Cable in production
@@ -43,15 +41,15 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 
-  gem 'capistrano'
-  # rbenv対応
-  gem 'capistrano-rbenv'
-  # bundleファイルの共通化
-  gem 'capistrano-bundler'
-  # assets precompile migration対応
-  gem 'capistrano-rails'
-  # puma対応
-  gem 'capistrano3-puma'
+  # gem 'capistrano'
+  # # rbenv対応
+  # gem 'capistrano-rbenv'
+  # # bundleファイルの共通化
+  # gem 'capistrano-bundler'
+  # # assets precompile migration対応
+  # gem 'capistrano-rails'
+  # # puma対応
+  # gem 'capistrano3-puma'
 end
 
 group :test do
