@@ -14,10 +14,10 @@ default: &default
   encoding: utf8mb4
   charset: utf8mb4
   collation: utf8mb4_unicode_ci
-  pool: <%= ENV.fetch('APP_DATABASE_POOL') { 5 } %>
-  host: <%= ENV.fetch('APP_DATABASE_HOST') { 'db' } %>
-  username: <%= ENV.fetch('APP_DATABASE_USERNAME') { 'root' } %>
-  password: <%= ENV.fetch('APP_DATABASE_PASSWORD') { '' } %>
+  pool: <%= Rails.application.credentials.db[:pool] { 5 } %>
+  host: <%= Rails.application.credentials.db[:endpoint] { 'db' } %>
+  username: <%= Rails.application.credentials.db[:user_name] { 'root' } %>
+  password: <%= Rails.application.credentials.db[:password]  { '' } %>
 
 development:
   <<: *default
@@ -53,5 +53,3 @@ test:
 production:
   <<: *default
   database: app_production
-  username: app
-  password: <%= ENV['APP_DATABASE_PASSWORD'] %>
