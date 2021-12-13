@@ -20,6 +20,8 @@ services:
       - db
     tty: true
     stdin_open: true
+    environment:
+      EDITOR: vim
 
 volumes:
   db-data:
